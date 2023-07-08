@@ -1,0 +1,212 @@
+
+
+/*------ DESKTOP ANIMATION ------*/
+
+@media (min-width: 913px){
+
+    /*------ NAV ANIMATION ------*/
+
+    ul::before{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 150px - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear infinite reverse;
+    }
+    ul::after{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 150px - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear -3s infinite reverse;
+    }
+
+
+
+    /*------ HEADER ANIMATION ------*/
+
+    header::before{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 150px - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear infinite reverse;
+    }
+
+    header::after{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 150px - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear -3s infinite reverse;
+    }
+
+
+
+    /*------ ASIDE ANIMATION ------*/
+
+    aside::before{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear infinite;
+    }
+
+    aside::after{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear -3s infinite;
+    }
+
+    /*------ KEYFRAME ANIMATION ------*/
+
+    @keyframes animate{
+
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+
+
+/*------ MOBILE ANIMATION ------*/
+
+@media (max-width: 912px){
+
+    /*------ NAV ANIMATION ------*/
+
+    ul::before{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        z-index:-1;
+        background: linear-gradient(-90deg, transparent, transparent, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 4s linear infinite;
+    }
+
+    ul::after{
+        content:'';
+        border-radius: 10px;
+        top: 50%;
+        right: -50%;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        z-index:-1;
+        background: linear-gradient(90deg, transparent, transparent, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 4s linear  infinite reverse;
+    }
+
+
+
+    /*------ HEADER ANIMATION ------*/
+
+    header::before{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: 50%;
+        height: 50px;
+        z-index: -1;
+        background: linear-gradient(-90deg, transparent, transparent, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 4s linear infinite;
+    }
+
+
+    /*------ ASIDE ANIMATION ------*/
+
+   /* aside::before{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear infinite;
+    }
+
+    aside::after{
+        content:'';
+        border-radius: 10px;
+        top: -50%;
+        right: -50%;
+        position: absolute;
+        width: calc(20vw - 10px);
+        height: calc(97vh - 10px);
+        z-index:-1;
+        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        transform-origin: bottom left;
+        animation: animate 6s linear -3s infinite;
+    }*/
+
+    /*------ KEYFRAME ANIMATION ------*/
+
+    @keyframes animate{
+
+        0%{
+            transform: translateX(0);
+        }
+
+        100%{
+            transform: translateX(-150vw);
+        }
+
+    }
+
