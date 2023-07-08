@@ -1,0 +1,63 @@
+
+
+/*--------- MOBILE / TABLET LAYOUT ---------*/
+
+
+@media screen and (max-width: 912px){ /* Enquanto a página estiver com no máximo 912px de largura, executa regras css abaixo */
+
+    body{
+        margin: 0;
+    }
+
+    .main_container{
+        height: 100%;
+        width: 100%;
+        display: flex; /* Inicia o Flexbox */
+        flex-direction: column; /* Troca a direção do main axis para a vertical (coluna) */
+        gap: 10px;
+
+
+    }
+
+    .main_container > header, .div_main > main, nav, aside{
+        background-color: #212121;
+    }
+
+    .header{
+
+        width: 100%;
+        position: fixed; /* A propriedade position: fixed + a propriedade bottom: 0 fixa o elemento aside no fundo da página */
+        bottom: 0;
+        height: max-content;
+    }
+
+    .div_main{
+        color: white;
+        order: 3; /* Muda a ordem do Flex Item sem interferir na ordem da marcação HTML. Quem tiver o maior order fica na frente (o padrão é order: 0;) */
+        z-index: -2;
+        height: 100%;
+    }
+
+    .div_main > main{
+        height: 100%; /* Colocar max-content quando tiver conteúdo */
+
+    }
+
+    .navigation{
+        height:max-content;
+        order: 2;
+    }
+
+    .aside{
+        position: sticky;
+        top: 0;
+        order: 1;
+        z-index: -1;
+        color: white;
+        height: 50px;:white
+    }
+
+
+
+}
+
