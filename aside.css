@@ -1,0 +1,28 @@
+
+
+/*------ ASIDE FOR DESKTOP ------*/
+@media (min-width: 913px){
+    aside > div{
+        border-radius: 10px;
+    }
+
+
+}
+
+/*------ ASIDE FOR MOBILE ------*/
+@media (max-width: 912px){
+
+}
+
+
+aside{
+    padding: 2px;
+    overflow: hidden;
+}
+
+aside > div{
+    background-color:#2F2F2F;
+    width: 100%;
+    height: 100%;
+}
+
