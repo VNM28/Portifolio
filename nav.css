@@ -1,0 +1,87 @@
+
+/*------ NAV FOR DESKTOP ------*/
+
+@media (min-width: 913px){
+    .navigation{
+        padding: 2px;
+        background-color: #212121;
+        position: sticky;
+        top: 10px;
+        color:white;
+
+    }
+
+    .navigation > ul{
+        margin: 0;
+        padding: 0 ;
+        border-radius: 10px;
+        list-style: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+/*------ NAV FOR MOBILE ------*/
+
+@media (max-width: 912px){
+    .navigation{
+        padding: 2px 0 2px 0;
+    }
+
+    .navigation > ul{
+        padding: 20px 0 40px 0;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    ul > li{
+        height: max-content;
+        margin: 0;
+    }
+}
+
+/* ------ GENERAL ------*/
+
+.navigation{
+    overflow: hidden;
+}
+
+.navigation > ul{
+    background-color: #2F2F2F;
+}
+
+ul > li{
+    /*height: calc((97vh - 150px - 10px) / 4);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li > a{
+    width: max-content;
+    font-size: max(30px, 2.8vw);
+    color: white;
+    text-decoration: none;
+    text-shadow: black 5px 5px;
+    transition: 0.2s;
+}
+
+li > a:hover{
+    color: #02fc71;
+    font-size: max(35px, 3.0vw);
+}
+
+li > div{
+    font-size: max(22px, 2.0vw);
+    color: #02fc71;
+}
+
+
