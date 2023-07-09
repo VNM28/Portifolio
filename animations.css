@@ -13,11 +13,11 @@
         right: -50%;
         position: absolute;
         width: calc(20vw - 10px);
-        height: calc(97vh - 150px - 10px);
+        height: calc(97vh - 10px);
         z-index:-1;
         background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
         transform-origin: bottom left;
-        animation: animate 6s linear infinite reverse;
+        animation: animate 6s linear infinite;
     }
     ul::after{
         content:'';
@@ -26,11 +26,11 @@
         right: -50%;
         position: absolute;
         width: calc(20vw - 10px);
-        height: calc(97vh - 150px - 10px);
+        height: calc(97vh - 10px);
         z-index:-1;
         background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
         transform-origin: bottom left;
-        animation: animate 6s linear -3s infinite reverse;
+        animation: animate 6s linear -3s infinite;
     }
 
 
@@ -76,11 +76,11 @@
         right: -50%;
         position: absolute;
         width: calc(20vw - 10px);
-        height: calc(97vh - 10px);
+        height: calc(97vh - 150px - 10px);
         z-index:-1;
         background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
         transform-origin: bottom left;
-        animation: animate 6s linear infinite;
+        animation: animate 6s linear infinite reverse;
     }
 
     aside::after{
@@ -90,11 +90,11 @@
         right: -50%;
         position: absolute;
         width: calc(20vw - 10px);
-        height: calc(97vh - 10px);
+        height: calc(97vh - 150px - 10px);
         z-index:-1;
         background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
         transform-origin: bottom left;
-        animation: animate 6s linear -3s infinite;
+        animation: animate 6s linear -3s infinite reverse;
     }
 
     /*------ KEYFRAME ANIMATION ------*/
