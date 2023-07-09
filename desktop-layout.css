@@ -17,7 +17,7 @@
         grid-template-rows: 150px calc(97vh - 150px - 10px); /* Cria 2 linhas: 150px a primeira e a segunda é 97% da viewheight - 150px da primeira linha - 10px do gap */
 
         grid-template-areas:
-            "header main aside"
+            "nav main header"
             "nav    main aside"; /* Cria a grid area */
 
         gap: 10px; /* Cria um gap de 10px */
