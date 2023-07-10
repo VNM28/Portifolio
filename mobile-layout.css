@@ -24,10 +24,8 @@
     }
 
     .header{
-
         width: 100%;
-        position: fixed; /* A propriedade position: fixed + a propriedade bottom: 0 fixa o elemento aside no fundo da página */
-        bottom: 0;
+        top: 0;
         height: max-content;
     }
 
@@ -49,15 +47,14 @@
     }
 
     .aside{
-        position: sticky;
-        top: 0;
-        order: 1;
+        width: 100%;
+        position: fixed;  /* A propriedade position: fixed + a propriedade bottom: 0 fixa o elemento no fundo da página */
+        bottom: 0;
+        order: 4;
         z-index: -1;
         color: white;
-        height: 50px;:white
+        height: 80px;
     }
-
-
 
 }
 
