@@ -9,7 +9,6 @@
         align-items: center;
         justify-content: space-around;
     }
-
 }
 
 /*------ ASIDE FOR MOBILE ------*/
@@ -20,7 +19,9 @@
         align-items: center;
         justify-content: space-around;
     }
-
+    span{
+        display:none;
+    }
 }
 
 
@@ -72,11 +73,11 @@ a > img{
 }
 
 .aside_item > .whatsapp_text{
-    margin-left: -14%;
+    margin-left: -12%;
 }
 
 .aside_item > .linkedin_text{
-    margin-left: -4%;
+    margin-left: -3%;
 }
 
 .aside_item > .email_text{
@@ -89,7 +90,8 @@ a > img{
     font-size: max(12px, 1.2vw);
     letter-spacing: 2px;
     position: absolute;
-    margin-top: -5vw;
+    margin-top: max(-65px, -5vw);
+    text-shadow: #2F2F2F 2px 2px;
     transition: all 0.5s;
 }
 
@@ -97,3 +99,4 @@ a > img{
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
 }
+
