@@ -21,13 +21,17 @@
         flex-direction: column;
         justify-content: space-around;
     }
+
+    .btn{
+        display: none;
+    }
 }
 
 /*------ NAV FOR MOBILE ------*/
 
 @media (max-width: 912px){
     .navigation{
-        padding: 2px 0 2px 0;
+        padding: 2px 0 2px 0;''
     }
 
     .navigation > ul{
@@ -41,9 +45,8 @@
         flex-wrap: wrap;
     }
 
-    ul > li{
-        height: max-content;
-        margin: 0;
+   .ul-desktop > .li-desktop{
+        display: none;
     }
 }
 
@@ -57,7 +60,7 @@
     background-color: #2F2F2F;
 }
 
-ul > li{
+ul > .li-desktop{
     /*height: calc((97vh - 150px - 10px) / 4);*/
     display: flex;
     flex-direction: column;
@@ -65,7 +68,7 @@ ul > li{
     align-items: center;
 }
 
-li > a{
+.li-desktop > a{
     width: max-content;
     font-size: max(30px, 2.8vw);
     color: white;
@@ -74,14 +77,68 @@ li > a{
     transition: 0.2s;
 }
 
-li > a:hover{
+.li-desktop > a:hover{
     color: #02fc71;
     font-size: max(35px, 3.0vw);
 }
 
-li > div{
+.li-desktop > div{
     font-size: max(22px, 2.0vw);
     color: #02fc71;
 }
 
+/*------ MODAL ------*/
+.modal-content{
+    overflow: hidden;
+    width: 98vw;
+    height: 98vh;
+    background: rgba(255,255,255, .1);
+    backdrop-filter: blur(10px);
+}
+
+.modal-header h1{
+    color: white;
+}
+.btn-close{
+    background-color: #02fc71;
+    opacity: 1;
+}
+
+.ul-mobile{
+   /*border: 2px solid white;*/
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ul-mobile > .li-mobile{
+    margin-left: -30px;
+    /*border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.li-mobile > a{
+    width: max-content;
+    font-size: 13vw;
+    color: white;
+    text-decoration: none;
+    text-shadow: black 5px 5px;
+    transition: 0.2s;
+}
+
+.li-mobile > a:hover{
+    color: #02fc71;
+    font-size: max(35px, 3.0vw);
+}
+
+.li-mobile > div{
+    font-size: max(22px, 2.0vw);
+    color: #02fc71;
+}
 

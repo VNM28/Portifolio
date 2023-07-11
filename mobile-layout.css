@@ -41,7 +41,9 @@
     }
 
     .navigation{
-        height:max-content;
+        position: sticky;
+        top: 10px;
+        height: max-content;
         order: 2;
     }
 
