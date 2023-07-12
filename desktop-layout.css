@@ -24,7 +24,7 @@
     }
 
 
-    .main_container > header, .div_main > main, nav, aside{
+    .header, .main, .navigation, .aside{
         border-radius: 10px;
         background-color: #212121;
     }
@@ -33,12 +33,14 @@
         grid-area: header;
     }
 
-    .div_main{
+    .main{
+        overflow: visible;
         grid-area: main;
         color: white;
     }
 
-    .div_main > main{
+    .main > .main__div{
+        background-color: #212121;
         height: 500vh; /* Colocar max-content quando tiver conteúdo */
     }
 

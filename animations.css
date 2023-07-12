@@ -6,7 +6,7 @@
 
     /*------ NAV ANIMATION ------*/
 
-    ul::before{
+    .navigation::before{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -19,7 +19,7 @@
         transform-origin: bottom left;
         animation: animate 6s linear infinite;
     }
-    ul::after{
+    .navigation::after{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -37,7 +37,7 @@
 
     /*------ HEADER ANIMATION ------*/
 
-    header::before{
+    .header::before{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -51,7 +51,7 @@
         animation: animate 6s linear infinite reverse;
     }
 
-    header::after{
+    .header::after{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -69,7 +69,7 @@
 
     /*------ ASIDE ANIMATION ------*/
 
-    aside::before{
+    .aside::before{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -83,7 +83,7 @@
         animation: animate 6s linear infinite reverse;
     }
 
-    aside::after{
+    .aside::after{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -119,7 +119,7 @@
 
     /*------ NAV ANIMATION ------*/
 
-    .ul-desktop::before{
+    .navigation::before{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -133,7 +133,7 @@
         animation: animate 4s linear infinite;
     }
 
-    .ul-desktop::after{
+    .navigation::after{
         content:'';
         border-radius: 10px;
         top: 50%;
@@ -151,7 +151,7 @@
 
     /*------ HEADER ANIMATION ------*/
 
-    header::before{
+    .header::before{
         content:'';
         border-radius: 10px;
         top: -50%;
@@ -168,33 +168,35 @@
 
     /*------ ASIDE ANIMATION ------*/
 
-   /* aside::before{
+    .aside::before{
         content:'';
         border-radius: 10px;
         top: -50%;
         right: -50%;
         position: absolute;
-        width: calc(20vw - 10px);
-        height: calc(97vh - 10px);
+        width: 50%;
+        height: 100%;
+        /*width: calc(20vw - 10px);
+        height: calc(97vh - 10px); */
         z-index:-1;
-        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        background: linear-gradient(-90deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
         transform-origin: bottom left;
         animation: animate 6s linear infinite;
     }
 
-    aside::after{
+    .aside::after{
         content:'';
         border-radius: 10px;
-        top: -50%;
+        top: 50%;
         right: -50%;
         position: absolute;
-        width: calc(20vw - 10px);
-        height: calc(97vh - 10px);
+        width: 50%;
+        height: 100%;
         z-index:-1;
-        background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
+        background: linear-gradient(90deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
         transform-origin: bottom left;
-        animation: animate 6s linear -3s infinite;
-    }*/
+        animation: animate 6s linear -3s infinite reverse;
+    }
 
     /*------ KEYFRAME ANIMATION ------*/
 

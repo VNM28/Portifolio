@@ -19,7 +19,7 @@
 
     }
 
-    .main_container > header, .div_main > main, nav, aside{
+    .header, .main, .navigation, .aside{
         background-color: #212121;
     }
 
@@ -30,13 +30,13 @@
         height: max-content;
     }
 
-    .div_main{
+    .main{
         color: white;
         order: 3; /* Muda a ordem do Flex Item sem interferir na ordem da marcação HTML. Quem tiver o maior order fica na frente (o padrão é order: 0;) */
         height: 100%;
     }
 
-    .div_main > main{
+    .main > .main__div{
         height: 100%; /* Colocar max-content quando tiver conteúdo */
 
     }

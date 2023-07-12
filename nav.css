@@ -11,7 +11,7 @@
 
     }
 
-    .navigation > ul{
+    .navigation__ul{
         margin: 0;
         padding: 0 ;
         border-radius: 10px;
@@ -22,11 +22,11 @@
         justify-content: space-around;
     }
 
-   .ul-desktop > .modal-button{
+   .navigation__ul > .navigation__button{
         display: none;
     }
 
-    ul > .nav-title{
+    .navigation__title{
         display: none;
     }
 
@@ -40,7 +40,7 @@
         padding: 2px 0 2px 0;''
     }
 
-    .navigation > ul{
+    .navigation__ul{
         padding:  5px 20px 15px;
         margin: 0;
         list-style: none;
@@ -51,7 +51,7 @@
         flex-wrap: wrap;
     }
 
-   .ul-desktop > .li-desktop{
+   .navigation__ul > .navigation__li{
         display: none;
     }
 }
@@ -62,11 +62,11 @@
     overflow: hidden;
 }
 
-.navigation > ul{
+.navigation__ul{
     background-color: #2F2F2F;
 }
 
-ul > .li-desktop{
+.navigation__li{
     /*height: calc((97vh - 150px - 10px) / 4);*/
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@ ul > .li-desktop{
     align-items: center;
 }
 
-.li-desktop > a{
+.navigation__li > .navigation__a{
     width: max-content;
     font-size: max(30px, 2.8vw);
     color: white;
@@ -83,13 +83,45 @@ ul > .li-desktop{
     transition: 0.2s;
 }
 
-.li-desktop > a:hover{
+.navigation__li > .navigation__a:hover{
     color: #02fc71;
     font-size: max(35px, 3.0vw);
 }
 
-.li-desktop > div{
+.navigation__li > .navigation__div{
     font-size: max(22px, 2.0vw);
     color: #02fc71;
+}
+
+.navigation__title{
+    position: absolute;
+    color: white;
+    left: 10px;
+    font-size: 35px;
+    text-shadow: black 5px 5px;
+}
+
+.navigation__button{
+    border: none;
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    background-color: white;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    transition-property:;
+    transition-duration: 0.5s;
+    box-shadow: #B6B6B6 0px 10px;
+}
+
+.navigation__button:hover{
+    transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+    box-shadow: #B6B6B6 0px 17px;
+}
+
+.navigation__button> img{
+    width: max(35px, 4vw);
+    height: max(25px, 3vw);
 }
 
