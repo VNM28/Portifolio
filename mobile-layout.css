@@ -24,6 +24,7 @@
     }
 
     .header{
+        display: none;
         width: 100%;
         top: 0;
         height: max-content;
@@ -42,7 +43,7 @@
 
     .navigation{
         position: sticky;
-        top: 10px;
+        top: 0;
         height: max-content;
         order: 2;
     }

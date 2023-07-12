@@ -22,9 +22,15 @@
         justify-content: space-around;
     }
 
-    .btn{
+   .ul-desktop > .modal-button{
         display: none;
     }
+
+    ul > .nav-title{
+        display: none;
+    }
+
+
 }
 
 /*------ NAV FOR MOBILE ------*/
@@ -35,13 +41,13 @@
     }
 
     .navigation > ul{
-        padding: 20px 0 40px 0;
+        padding:  5px 20px 15px;
         margin: 0;
         list-style: none;
         height: 100%;
         display: flex;
-        justify-content: space-around;
-        gap: 10px;
+        gap:;
+        justify-content: right;
         flex-wrap: wrap;
     }
 
@@ -87,58 +93,25 @@ ul > .li-desktop{
     color: #02fc71;
 }
 
-/*------ MODAL ------*/
-.modal-content{
-    overflow: hidden;
-    width: 98vw;
-    height: 98vh;
-    background: rgba(255,255,255, .1);
-    backdrop-filter: blur(10px);
-}
-
-.modal-header h1{
-    color: white;
-}
-.btn-close{
-    background-color: #02fc71;
-    opacity: 1;
-}
-
-.ul-mobile{
-   /*border: 2px solid white;*/
-    margin: 0;
-    height: 100%;
+.modal-body > .modal_footer{
+    /*border: 2px solid red;*/
+    padding: 5px 0 5px 0;
+    gap: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.ul-mobile > .li-mobile{
-    margin-left: -30px;
-    /*border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
-.li-mobile > a{
-    width: max-content;
-    font-size: 13vw;
+.modal_footer > h5{
     color: white;
-    text-decoration: none;
-    text-shadow: black 5px 5px;
-    transition: 0.2s;
+    text-shadow: black 1px 1px;
+    letter-spacing: 2px;
+    font-size: 3vh;
 }
 
-.li-mobile > a:hover{
-    color: #02fc71;
-    font-size: max(35px, 3.0vw);
-}
-
-.li-mobile > div{
-    font-size: max(22px, 2.0vw);
-    color: #02fc71;
+.modal_footer > img{
+    width: 18.5vh;
+    height: 6.5vh;
 }
 

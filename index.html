@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="aside.css" type="text/css" media="all">
         <link rel="stylesheet" href="header.css" type="text/css" media="all">
         <link rel="stylesheet" href="animations.css" type="text/css" media="all">
+        <link rel="stylesheet" href="modal.css" type="text/css" media="all">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <title>PORTIFÓLIO</title>
     </head>
@@ -28,7 +29,7 @@
                 </div>
             </header>
 
-            <!------ DESKTOP NAVIGATION ------>
+            <!------ NAVIGATION ------>
             <nav class="navigation animate__animated animate__slideInUp">
                 <ul class="ul-desktop">
                     <li class="li-desktop">
@@ -48,11 +49,9 @@
                         <a href="#" class="">SUMMARY</a>
                     </li>
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Menu
-                    </button>
-
+                    <h5 class="nav-title">PORTIFÓLIO</h5>
+                    <!-- BUTTON TRIGGER MODAL -->
+                    <button class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <img src="img/nav-button.png" alt="" width="70px" height="70px"> </button>
                 </ul>
 
             </nav>
@@ -69,7 +68,7 @@
             <aside class="aside animate__animated animate__slideInUp">
                 <div class="div_aside">
                     <div class="aside_item">
-                        <a href="https://www.rhuanbello.com/" class="">
+                        <a href="https://github.com/VNM28" class="">
                             <img src="img/github.png" alt="">
                         </a>
                         <span class="github_text">@VNM28</span>
@@ -81,7 +80,7 @@
                         <span class="whatsapp_text">(21)96551-1661</span>
                     </div>
                     <div class="aside_item">
-                        <a  href class="">
+                        <a  href="https://br.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F" class="">
                             <img src="img/linkedin.png" alt="">
                         </a>
                         <span class="linkedin_text">Linkedin</span>
@@ -103,11 +102,11 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1>PORTIFÓLIO</h1>
-                        <button type="button" class="btn btn-primary btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
                     <div class="modal-body">
+                        <div class="modal_header">
+                            <h1></h1>
+                            <button type="button" class="btn btn-primary btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                          <ul class="ul-mobile">
                             <li class="li-mobile">
                                 <div>PASSO 1</div>
@@ -126,6 +125,10 @@
                                 <a href="#" class="">SUMMARY</a>
                             </li>
                         </ul>
+                        <div class="modal_footer">
+                            <h5>Feito em :</h5>
+                            <img src="img/html5-icon-png-1.png" width="" height="">
+                        </div>
                     </div>
                 </div>
             </div>
