@@ -93,25 +93,3 @@ ul > .li-desktop{
     color: #02fc71;
 }
 
-.modal-body > .modal_footer{
-    /*border: 2px solid red;*/
-    padding: 5px 0 5px 0;
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.modal_footer > h5{
-    color: white;
-    text-shadow: black 1px 1px;
-    letter-spacing: 2px;
-    font-size: 3vh;
-}
-
-.modal_footer > img{
-    width: 18.5vh;
-    height: 6.5vh;
-}
-

@@ -20,19 +20,6 @@ ul > .nav-title{
 
 
 
-@media (min-width: 820px){
-    .modal-content{
-       /* border: 2px solid white; */
-        width: 97vw;
-        margin-left: -70%;
-        height: 98vh;
-        /*background-color: #212121; */
-        background: rgba(255,255,255, .1);
-        backdrop-filter: blur(10px);
-    }
-
-}
-
 @media (min-width: 768px){
     .modal-content{
        /* border: 2px solid white; */
@@ -46,6 +33,31 @@ ul > .nav-title{
 
 }
 
+@media (min-width: 820px){
+    .modal-content{
+       /* border: 2px solid white; */
+        width: 97vw;
+        margin-left: -30%;
+        height: 98vh;
+        /*background-color: #212121; */
+        background: rgba(255,255,255, .1);
+        backdrop-filter: blur(10px);
+    }
+
+}
+
+@media (min-width: 912px){
+    .modal-content{
+       /* border: 2px solid white; */
+        width: 97vw;
+        margin-left: -39%;
+        height: 98vh;
+        /*background-color: #212121; */
+        background: rgba(255,255,255, .1);
+        backdrop-filter: blur(10px);
+    }
+
+}
 
 
 .modal-body{
