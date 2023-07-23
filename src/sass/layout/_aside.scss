@@ -1,0 +1,96 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * aside-for-desktop.................Media Query com configurações do Aside para desktop.
+ * aside-for-mobile..................Media Query com configurações do Aside para dispositivos mobile.
+ * general-aside.....................Configurações genéricas do Aside.
+ * */
+
+
+
+
+
+/*---------------------------*\
+ #ASIDE-FOR-DESKTOP
+\*---------------------------*/
+
+@media (min-width: 913px){
+
+  .aside__div {
+    border-radius: 10px;
+    justify-content: space-around;
+    @include flex(column, '', center);
+  }
+}
+
+
+
+
+
+/*---------------------------*\
+ #ASIDE-FOR-MOBILE
+\*---------------------------*/
+
+@media (max-width: 912px){
+
+  .aside__div {
+    border-radius: 0;
+    @include flex('',space-around, center);
+  }
+
+  .aside__span { display: none };
+
+}
+
+
+
+
+
+/*---------------------------*\
+ #GENERAL-ASIDE
+\*---------------------------*/
+
+.aside {
+  padding:  2px;
+  overflow: hidden;
+
+   &__div {
+    background-color: $secondary-color;
+    width:  100%;
+    height: 100%;
+  }
+
+  &__button { padding: 0; }
+  
+  &__a {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  &__span--whatsapp { margin-left: -12%; }
+
+  &__span--linkedin { margin-left:  -3%; }
+
+  &__span--email    { margin-left:  -30%; }
+
+  &__span {
+    color: $third-color;
+    opacity: 0;
+    font-size:  max(12px, 1.2vw);
+    letter-spacing: 2px;
+    position: absolute;
+    margin-top: max(-65vw, -5vw); //(-65px, -5vw)
+    text-shadow: $secondary-color 2px 2px;
+    transition: all 0.5s;
+  }
+
+  &__button:hover &__span {
+     opacity: 1;
+     transform: translate3d(0%, -30%, 100px);
+  }
+
+}
+
+ 

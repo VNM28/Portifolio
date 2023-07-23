@@ -1,0 +1,34 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * style.css..........Configurações globais de all o projeto.
+ *
+ */
+
+/*---------------------------*\
+ #CONFIGURAÇÃO-GERAL
+\*---------------------------*/
+
+
+@mixin flex($flexdirection, $justify, $align) {
+  display: flex;
+  flex-direction: $flexdirection;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Retro';
+
+}
+
+body {
+    height: 500vh;
+    background-color: black;
+}
+
+

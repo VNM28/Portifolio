@@ -1,0 +1,119 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * nav-for-desktop.................Media Query com configurações do Nav para desktop.
+ * nav-for-mobile..................Media Query com configurações do Nav para dispositivos mobile.
+ * general-nav.....................Configurações genéricas do Nav.
+ * */
+
+
+
+
+
+/*---------------------------*\
+ #NAV-FOR-DESKTOP
+\*---------------------------*/
+
+@media (min-width: 913px){
+
+  .navigation {
+    padding: 2px;
+    background-color: $primary-color;
+    position: sticky;
+    top: 10px;
+    color: white;
+
+    &__ul {
+      margin:  0;
+      padding: 0 ;
+      border-radius: 10px;
+      list-style: none;
+      height: 100%;
+      @include flex(column,space-around,'');    
+    }
+
+    &__ul &__button { display: none; }
+    &__title { display: none; }
+
+  }
+
+}
+
+
+
+
+
+/*---------------------------*\
+ #NAV-FOR-MOBILE
+\*---------------------------*/
+
+@media (max-width: 912px){
+
+  .navigation { 
+    padding: 2px 0 2px 0; 
+
+    &__ul{
+      padding:  5px 20px 15px;
+      margin: 0;
+      list-style: none;
+      height: 100%;
+      @include flex('',right,'');
+
+      flex-wrap: wrap;
+    }
+
+    &__ul &__li { display: none; }
+    
+  }
+
+}
+
+
+
+
+
+/*---------------------------*\
+ #GENERAL-NAV
+\*---------------------------*/
+
+.navigation { 
+  overflow: hidden;
+  
+  &__ul { background-color: $secondary-color; }
+
+  &__li { @include flex(column, center, center); }
+  
+  &__li &__div {
+     font-size: max(22px, 2.0vw);
+     color: $third-color;
+   }
+
+  &__li &__a {
+    color: $fourth-color;
+    width: max-content;
+    font-size: max(30px, 2.8vw);
+    text-decoration: none;
+    text-shadow: $shadow-grey 0 3.3px;
+    letter-spacing: 2px;
+    transition: 0.2s;  
+  }
+
+  &__li  &__a:hover {
+     color: $third-color;
+     font-size: max(35px, 3.0vw);
+     text-shadow: $shadow-green 0 3.3px;
+  }
+
+  &__title {
+    position: absolute;
+    color: $fourth-color;
+    left: 10px;
+    font-size: 35px;
+    text-shadow: $shadow-grey 0 3.3px;
+  }
+ 
+}
+
+

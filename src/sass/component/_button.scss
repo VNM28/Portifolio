@@ -1,0 +1,35 @@
+button {
+  @include  flex('', center, '');
+  background-color: $fourth-color;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  width:  auto;
+  height: auto;
+  box-shadow: $shadow-grey 0px 10px;
+  transition-duration: 0.5s;
+
+  & img {
+    width:  max(35px, 4vw);
+    height: max(25px, 3vw);
+  }
+
+  @media (min-width: 913px){
+
+    &:hover{
+      transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+      box-shadow: $shadow-grey 0px 22px;
+    }
+  }
+
+  @media (max-width: 912px){
+
+    &:hover{
+      transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+      box-shadow: $shadow-grey 0px 17px;
+    }
+  }
+
+}
+
+

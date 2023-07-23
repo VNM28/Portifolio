@@ -1,0 +1,63 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * mobile-layout.................Layout das seções(header, nav...) para desktop.
+ */
+
+
+
+
+ 
+/*---------------------------*\
+ #DESKTOP-LAYOUT
+\*---------------------------*/
+
+@media screen and (min-width: 913px){
+
+  body { margin: 10px; }
+
+  .main_container {
+    height: 100%;
+    width:  100%;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 150px calc(97vh - 150px - 10px);
+    grid-template-areas:
+            "nav main header"
+            "nav main aside";
+    gap: 10px;
+  }
+
+  .header, .main, .navigation, .aside {
+    border-radius: 10px;
+    background-color: $primary-color;
+  }
+
+  .header { grid-area: header; }
+
+  .main {
+    overflow:  visible;
+    grid-area: main;
+
+    &__div {
+      background-color: $primary-color;
+      height: 500vh;
+    }
+  }
+
+  .navigation {
+    grid-area: nav;
+    position:  sticky;
+    top: 10px;
+  }
+
+  .aside {
+    grid-area: aside;
+    position:  sticky;
+    top: 10px;
+  }
+
+}
+

@@ -1,0 +1,59 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * mobile-layout.................Layout das seções(header, nav...) para dispositivos mobile.
+ */
+
+
+
+
+
+/*---------------------------*\
+ #MOBILE-LAYOUT
+\*---------------------------*/
+
+@media screen and (max-width: 912px){
+
+  body { margin: 0; }
+
+  .main_container {
+    height: 100%;
+    width:  100%;
+    @include flex(column,'','');
+    gap: 10px;
+  }
+
+  .main, .navigation, .aside { background-color: $primary-color; }
+
+  .header {
+    display: none;
+  }
+
+  .main {
+    order: 3;
+    height: 100%;
+
+    &__div { height: 100%; } //Colocar max-content quando tiver conteúdo 
+
+  }
+
+  .navigation {
+    position: sticky;
+    top:   0;
+    order: 2;
+    height: max-content;
+  }
+
+  .aside {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    order:  4;
+    color: $fourth-color;
+    height: 80px;
+  }
+
+}
+
