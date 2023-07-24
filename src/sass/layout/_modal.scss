@@ -1,5 +1,5 @@
 
-.modal__content{
+.modal__content {
   width:  100%;
   height: 98vh;
   background: rgba(255,255,255, .1);
@@ -16,7 +16,7 @@
 
 @media (min-width: 768px){
 
-  .modal__content{
+  .modal__content {
     width:  97vw;
     height: 98vh;
     margin-left: -25%;
@@ -32,9 +32,9 @@
  #MODAL-FOR-IPADAIR
 \*---------------------------*/
 
-@media (min-width: 820px){
+@media (min-width: 810px){
 
-  .modal__content{
+  .modal__content {
     width:  97vw;
     height: 98vh;
     margin-left: -30%;
@@ -52,7 +52,7 @@
 
 @media (min-width: 912px){
 
-  .modal__content{
+  .modal__content {
     width: 97vw;
     height: 98vh;
     margin-left: -39%;
@@ -64,104 +64,74 @@
 
 
 
-/*.modal-dialog{
-  $teste: 100vw;
-  @if (100vw > 768px){
-    display: none;
-  }
-}*/
 
 
 /*---------------------------*\
  #GENERAL-MODAL
 \*---------------------------*/
 
-.modal__body{
-  display: flex;
-  flex-direction: column;
+.modal__body {
+  @include flex(column,'','');
   gap: 20px;
-}
 
- .modal__header{
-   display: flex;
-   align-items: center;
-   justify-content: left;
- }
+  .modal__header { @include flex('', left, center); }
+  .modal__buttonclose { box-shadow: $shadow-grey 0px 5px; }
 
-  .modal__buttonclose{
-    border:  none;
-    display: flex;
-    justify-content:  center;
-    background-color: white;
-    padding:10px;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    transition-duration: 0.5s;
-    box-shadow: $shadow-grey 0px 5px;
-  }
-
-   .modal__buttonclose img{
-     width: 15px;
+  .modal__buttonclose img {
+     width:  15px;
      height: 10px;
    }
 
- .modal__ul{
-   direction: column;
-   justify-content: space-around;
-   flex-wrap: wrap;
- }
-
-  .modal__ul .modal__li{
-    margin-left: -30px;
-    display: flex;
-    flex-direction:  column;
-    justify-content: center;
-    align-items:     center;
+  .modal__ul {
+    @include flex(column, space-around,'');
+    flex-wrap: wrap;
   }
 
-  .modal__li > a{
+  .modal__ul .modal__li {
+    margin-left: -30px;
+    @include flex(column, center, center);
+  }
+
+  .modal__li > a {
     font-size: 7vh;
-    color: white;
+    color: $fourth-color;
     text-decoration: none;
     text-shadow: $shadow-grey 0 3.3px;
     transition: 0.2s;
+
   }
 
-  .modal__li > a:hover{
+  .modal__li > a:hover {
     text-shadow: $shadow-green 0 3.3px;
     color: $third-color;
-    font-size:8vh;
+    font-size: 8vh;
   }
-
-  .modal__li > div{
+ 
+  .modal__li > div {
     font-size: 4vh;
     color: $third-color;
   }
 
-.modal__body > .modal__footer{
-  padding: 5px 0 5px 0;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-  align-items:     center;
-  height: 100%;
+  .modal__footer {
+    padding: 5px 0 5px 0;
+    gap: 10px;
+    @include flex('', center, center);
+    height: 100%;
+  }
+
+  .modal__footer > h5 {
+    color: $fourth-color;
+    text-shadow: black 1px 1px;
+    letter-spacing: 2px;
+    font-size: 3vh;
+  }
+
+  .modal__footer > img {
+    width:  18.5vh;
+    height: 6.5vh;
+  }
+
 }
-
-.modal__footer > h5{
-  color: white;
-  text-shadow: black 1px 1px;
-  letter-spacing: 2px;
-  font-size: 3vh;
-}
-
-.modal__footer > img{
-  width:  18.5vh;
-  height: 6.5vh;
-}
-
-
-
 
 
 
@@ -173,7 +143,7 @@
 
 @media (max-width: 299px){
 
-  .modal__li > a{
+  .modal__li > a {
     font-size: 14vw;
     color: white;
     text-decoration: none;
@@ -181,13 +151,13 @@
     transition: 0.2s;
   }
 
-  .modal__li > a:hover{
+  .modal__li > a:hover {
     text-shadow: $shadow-green 0 3.3px;
     color: $third-color;
     font-size:15vw;
   }
 
-  .modal__li > div{
+  .modal__li > div {
     font-size: 8vw;
     color: $third-color;
   }
