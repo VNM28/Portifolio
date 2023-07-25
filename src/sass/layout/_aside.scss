@@ -3,9 +3,11 @@
  * TABLE CONTENTS
  *
  * SETTINGS
- * aside-for-desktop.................Media Query com configurações do Aside para desktop.
- * aside-for-mobile..................Media Query com configurações do Aside para dispositivos mobile.
- * general-aside.....................Configurações genéricas do Aside.
+ * ASIDE-FOR-DESKTOP.................Media Query com configurações do Aside para desktop.
+ * ASIDE-FOR-MOBILE..................Media Query com configurações do Aside para dispositivos mobile.
+ * GENERAL-ASIDE.....................Configurações genéricas do Aside.
+ * @include flex.....................Mixin localizado em /base/_general.scss.
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
  * */
 
 
@@ -62,7 +64,7 @@
     height: 100%;
   }
 
-  &__button { padding: 0; }
+  &__button { padding: 0; } /* .aside__button{} é uma extensão de button{} em _button_scss */
   
   &__a {
     padding: 10px;

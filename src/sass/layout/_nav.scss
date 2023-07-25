@@ -3,9 +3,11 @@
  * TABLE CONTENTS
  *
  * SETTINGS
- * nav-for-desktop.................Media Query com configurações do Nav para desktop.
- * nav-for-mobile..................Media Query com configurações do Nav para dispositivos mobile.
- * general-nav.....................Configurações genéricas do Nav.
+ * NAV-FOR-DESKTOP.................Media Query com configurações do Nav para desktop.
+ * NAV-FOR-MOBILE..................Media Query com configurações do Nav para dispositivos mobile.
+ * GENERAL-NAV.....................Configurações genéricas do Nav.
+ * @include flex..................Mixin localizado em /base/_general.scss. 
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
  * */
 
 

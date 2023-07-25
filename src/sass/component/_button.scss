@@ -1,3 +1,19 @@
+
+//This is a single output by sass. It is intend to ONLY maintain the general button configuration.
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * @include flex..................Mixin localizado em /base/_general.scss.
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+
+
 button {
   @include  flex('', center, '');
   background-color: $fourth-color;

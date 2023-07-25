@@ -10,7 +10,6 @@
  #CONFIGURAÇÃO-GERAL
 \*---------------------------*/
 
-
 @mixin flex($flexdirection, $justify, $align) {
   display: flex;
   flex-direction: $flexdirection;

@@ -1,11 +1,22 @@
 // This is the single output by sass. It is intend to ONLY @import other files.
 
+/**
+ * TABLE CONTENTS
+ *
+ * IMPORTS
+ * BASE..................Import os arquivos base/*.scss.
+ * COMPONENT.............Import os arquivos component/*.scss.
+ * LAYOUT................Import os arquivos layout/*.scss.
+ * STATE.................Import os arquivos state/*.scss.
+ * */
+
+
 
 //BASE 
   @import "base/general";
   @import "base/fonts";
   @import "base/colors";
-  @import "base/normalize.css";
+  @import "base/normalize";
 
 
 

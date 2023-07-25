@@ -1,39 +1,49 @@
 
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * DESKTOP-ANIMATION................Animação para Desktop.
+ * MOBILE-ANIMATION.................Animação para Mobile.
+ * NAV-ANIMATION....................Animação aplicada no Nav.
+ * ASIDE-ANIMATION..................Animação aplicada no Aside.
+ * HEADER-ANIMATION.................Animação aplicada no Header.
+ * KEYFRAMES-ANIMATION..............Animação.
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+
 /*---------------------------*\
  #DESKTOP-ANIMATION
 \*---------------------------*/
 
-@media (min-width: 913px){
+@mixin animationDesktop() {
+  content:'';
+  border-radius: 10px;
+  top:   -50%;
+  right: -50%;
+  position: absolute;
+  width:  calc(20vw - 10px);
+  height: calc(97vh - 10px);
+  z-index:-1;
+  background: linear-gradient(0deg, transparent, transparent, $third-color, $third-color, $third-color, $third-color, $third-color);
+  transform-origin: bottom left;
+  animation: animate 6s linear infinite;
+}
+
+@media (min-width: 913px) {
 
   /*---------------------------*\
    #NAV-ANIMATION
   \*---------------------------*/
 
-  .navigation::before{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  calc(20vw - 10px);
-    height: calc(97vh - 10px);
-    z-index:-1;
-    background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
-    animation: animate 6s linear infinite;
-  }
+  .navigation::before { @include animationDesktop(); }
 
-  .navigation::after{
-    content:'';
-    border-radius: 10px;
-    top:  -50%;
-    right: -50%;
-    position: absolute;
-    width:  calc(20vw - 10px);
-    height: calc(97vh - 10px);
-    z-index:-1;
-    background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
+  .navigation::after {
+    @include animationDesktop();
     animation: animate 6s linear -3s infinite;
   }
 
@@ -45,31 +55,15 @@
    #HEADER-ANIMATION
   \*---------------------------*/
 
-  .header::before{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  calc(20vw - 10px);
+  .header::before {
+    @include animationDesktop();
     height: calc(97vh - 150px - 10px);
-    z-index:-1;
-    background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
     animation: animate 6s linear infinite reverse;
   }
 
-  .header::after{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  calc(20vw - 10px);
+  .header::after {
+    @include animationDesktop();
     height: calc(97vh - 150px - 10px);
-    z-index:-1;
-    background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
     animation: animate 6s linear -3s infinite reverse;
   }
 
@@ -81,31 +75,15 @@
    #ASIDE-ANIMATION
   \*---------------------------*/
 
-  .aside::before{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  calc(20vw - 10px);
+  .aside::before {
+    @include animationDesktop();
     height: calc(97vh - 150px - 10px);
-    z-index:-1;
-    background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
     animation: animate 6s linear infinite reverse;
   }
 
-  .aside::after{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  calc(20vw - 10px);
+  .aside::after {
+    @include animationDesktop();
     height: calc(97vh - 150px - 10px);
-    z-index:-1;
-    background: linear-gradient(0deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
     animation: animate 6s linear -3s infinite reverse;
   }
 
@@ -117,13 +95,13 @@
    #KEYFRAMES-ANIMATION
   \*---------------------------*/
 
-  @keyframes animate{
+  @keyframes animate {
 
-    0%{
+    0% {
       transform: rotate(0deg);
     }
 
-    100%{
+    100% {
       transform: rotate(360deg);
     }
 
@@ -139,36 +117,25 @@
  #MOBILE-ANIMATION
 \*---------------------------*/
 
+@mixin animationMobile() {
+  @include animationDesktop();
+  width:  50%;
+  height: 100%;
+  background: linear-gradient(-90deg, transparent, transparent, $third-color, $third-color, $third-color);  
+  animation: animate 4s linear infinite;
+}
+
 @media (max-width: 912px){
   /*---------------------------*\
    #NAV-ANIMATION
   \*---------------------------*/
 
-  .navigation::before{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  50%;
-    height: 100%;
-    z-index:-1;
-    background: linear-gradient(-90deg, transparent, transparent, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
-    animation: animate 4s linear infinite;
-  }
+  .navigation::before { @include animationMobile(); }
 
-  .navigation::after{
-    content:'';
-    border-radius: 10px;
-    top:   50%;
-    right: -50%;
-    position: absolute;
-    width:  50%;
-    height: 100%;
-    z-index:-1;
-    background: linear-gradient(90deg, transparent, transparent, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
+  .navigation::after {
+    @include animationMobile();
+    top: 50%;
+    background: linear-gradient(90deg, transparent, transparent, $third-color, $third-color, $third-color);
     animation: animate 4s linear  infinite reverse;
   }
 
@@ -180,18 +147,9 @@
    #HEADER-ANIMATION
   \*---------------------------*/
 
-  .header::before{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  50%;
+  .header::before {
+    @include animationMobile();
     height: 50px;
-    z-index: -1;
-    background: linear-gradient(-90deg, transparent, transparent, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
-    animation: animate 4s linear infinite;
   }
 
 
@@ -202,32 +160,17 @@
    #ASIDE-ANIMATION
   \*---------------------------*/
 
-  .aside::before{
-    content:'';
-    border-radius: 10px;
-    top:   -50%;
-    right: -50%;
-    position: absolute;
-    width:  50%;
-    height: 100%;
-    z-index:-1;
-    background: linear-gradient(-90deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
-    animation: animate 6s linear infinite;
+  .aside::before {
+    @include animationMobile();
+    background: linear-gradient(-90deg, transparent, transparent, $third-color, $third-color, $third-color, $third-color, $third-color);
+    animation:  animate 6s linear infinite;
   }
 
-  .aside::after{
-    content:'';
-    border-radius: 10px;
-    top:   50%;
-    right: -50%;
-    position: absolute;
-    width:  50%;
-    height: 100%;
-    z-index:-1;
-    background: linear-gradient(90deg, transparent, transparent, #02fc71, #02fc71, #02fc71, #02fc71, #02fc71);
-    transform-origin: bottom left;
-    animation: animate 6s linear -3s infinite reverse;
+  .aside::after {
+    @include animationMobile();
+    top: 50%;
+    background: linear-gradient(90deg, transparent, transparent, $third-color, $third-color, $third-color, $third-color, $third-color);
+    animation:  animate 6s linear -3s infinite reverse;
   }
 
   /*---------------------------*\
@@ -236,11 +179,11 @@
 
   @keyframes animate{
 
-    0%{
+    0% {
       transform: translateX(0);
     }
 
-    100%{
+    100% {
       transform: translateX(-150vw);
     }
 
