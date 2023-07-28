@@ -22,7 +22,7 @@
 
   .navigation {
     padding: 2px;
-    background-color: $primary-color;
+    background-color: $background-color;
     border-radius: 10px;
     position: sticky;
     top: 10px;
@@ -83,7 +83,7 @@
 .navigation { 
   overflow: hidden;
   
-  &__ul { background-color: $secondary-color; }
+  &__ul { background-color: $background-color; }
 
   &__li { @include flex(column, center, center); }
   
