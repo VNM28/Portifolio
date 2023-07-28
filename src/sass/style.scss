@@ -29,6 +29,8 @@
 
 
 //LAYOUT
+  @import "layout/_main/main";
+  @import "layout/_main/main--sobreMin";
   @import "layout/aside";
   @import "layout/header";
   @import "layout/modal";
@@ -41,7 +43,8 @@
 
 
 //STATE
-  @import "state/animations";
+ // @import "state/layout--animations";
+  @import "state/main__component--animations";
 
 
 

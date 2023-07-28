@@ -31,34 +31,13 @@
     gap: 10px;
   }
 
-  .header, .main, .navigation, .aside {
-    border-radius: 10px;
-    background-color: $primary-color;
-  }
-
   .header { grid-area: header; }
 
-  .main {
-    overflow:  visible;
-    grid-area: main;
+  .main { grid-area: main; }
 
-    &__div {
-      background-color: $primary-color;
-      height: 500vh;
-    }
-  }
+  .navigation { grid-area: nav; }
 
-  .navigation {
-    grid-area: nav;
-    position:  sticky;
-    top: 10px;
-  }
-
-  .aside {
-    grid-area: aside;
-    position:  sticky;
-    top: 10px;
-  }
+  .aside { grid-area: aside; }
 
 }
 

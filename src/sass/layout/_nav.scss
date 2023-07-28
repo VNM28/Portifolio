@@ -23,9 +23,9 @@
   .navigation {
     padding: 2px;
     background-color: $primary-color;
+    border-radius: 10px;
     position: sticky;
     top: 10px;
-    color: white;
 
     &__ul {
       margin:  0;

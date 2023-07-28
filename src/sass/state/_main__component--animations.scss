@@ -1,0 +1,68 @@
+.main__component--img div:nth-child(2) img {
+   animation: bouncing 2s linear infinite both;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(2vw);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.main__component--img div:nth-child(1) div{
+    
+   & img:nth-child(1) {
+     transition-duration: 0.8s;
+   }
+
+   &:hover img:nth-child(1) {
+     transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+   }
+
+   & img:nth-child(2) {
+     transition-duration: 0.8s;
+   }
+
+   &:hover img:nth-child(2) {
+     opacity: 1;
+     z-index: 1;
+     transform: translate3d(0%, -30%, 100px);
+   }
+   
+   & div {
+     transition-duration: 0.8s;
+   }
+   
+   &:hover div {
+     transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+     backdrop-filter: blur(5px);
+     background-image:"";
+
+   }
+
+   & p {
+     transition-duration: 0.8s;
+   }
+
+   &:hover p {
+     transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+     opacity: 0;
+   }
+
+
+}
+
+
+
+
+
+
+
