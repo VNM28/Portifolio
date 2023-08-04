@@ -75,7 +75,7 @@
    #ASIDE-ANIMATION
   \*---------------------------*/
 
-  .aside::before {
+ .aside::before {
     @include animationDesktop();
     height: calc(97vh - 150px - 10px);
     animation: animate 6s linear infinite reverse;

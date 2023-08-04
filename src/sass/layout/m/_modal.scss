@@ -1,0 +1,180 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * MODAL-FOR-IPADIMINI...............Media Query com configurações do Nav para IPadMini.
+ * MODAL-FOR-IPADAIR.................Media Query com configurações do Nav para IPadAir.
+ * MODAL-FOR-SURFACEPRO7.............Media Query com configurações do Nav para SurFacePRO7.
+ * MODAL-FOR-GALAXYFOLD..............Media Query com configurações do Nav para GalaxyFold.
+ * GENERAL-MODAL.....................Configurações genéricas do Nav.
+ * @include flex.....................Mixin localizado em /base/_general.scss.
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+
+.modal__content {
+  width:  100%;
+  height: 98vh;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(10px);
+}
+
+
+
+
+
+/*---------------------------*\
+ #MODAL-FOR-IPADIMINI
+\*---------------------------*/
+
+@media (min-width: 768px){
+
+  .modal__content {
+    width:  97vw;
+    height: 98vh;
+    margin-left: -25%;
+  }
+
+}
+
+
+
+
+
+/*---------------------------*\
+ #MODAL-FOR-IPADAIR
+\*---------------------------*/
+
+@media (min-width: 810px){
+
+  .modal__content {
+    width:  97vw;
+    height: 98vh;
+    margin-left: -30%;
+  }
+
+}
+
+
+
+
+
+/*---------------------------*\
+ #MODAL-FOR-SURFACEPRO7
+\*---------------------------*/
+
+@media (min-width: 912px){
+
+  .modal__content {
+    width:  97vw;
+    height: 98vh;
+    margin-left: -39%;
+  }
+}
+
+
+
+
+
+/*---------------------------*\
+ #GENERAL-MODAL
+\*---------------------------*/
+
+.modal__body {
+  @include flex(column,'','');
+  gap: 20px;
+
+  .modal__header { @include flex('', left, center); }
+  .modal__buttonclose { box-shadow: $shadow-grey 0px 5px; }
+
+  .modal__buttonclose img {  /* .modal__buttonclose img{} é uma extensão de button{} em _button_scss */
+     width:  15px;
+     height: 10px;
+   }
+
+  .modal__ul {
+    @include flex(column, space-around,'');
+    flex-wrap: wrap;
+  }
+
+  .modal__ul .modal__li {
+    margin-left: -30px;
+    @include flex(column, center, center);
+  }
+
+  .modal__li > a {
+    font-size: 7vh;
+    color: $fourth-color;
+    text-decoration: none;
+    text-shadow: $shadow-grey 0 3.3px;
+    transition: 0.2s;
+
+  }
+
+  .modal__li > a:hover {
+    text-shadow: $shadow-blue 0 3.3px;
+    color: $third-color;
+    font-size: 8vh;
+  }
+ 
+  .modal__li > div {
+    font-size: 4vh;
+    color: $third-color;
+  }
+
+  .modal__footer {
+    padding: 5px 0 5px 0;
+    gap: 10px;
+    @include flex('', center, center);
+    height: 100%;
+  }
+
+  .modal__footer > h5 {
+    color: $fourth-color;
+    text-shadow: black 1px 1px;
+    letter-spacing: 2px;
+    font-size: 3vh;
+  }
+
+  .modal__footer > img {
+    width:  18.5vh;
+    height: 6.5vh;
+  }
+
+}
+
+
+
+
+
+/*---------------------------*\
+ #MODAL-FOR-GALAXYFOLD
+\*---------------------------*/
+
+@media (max-width: 299px){
+
+  .modal__li > a {
+    font-size: 14vw;
+    color: white;
+    text-decoration: none;
+    text-shadow: $shadow-grey 0 3.3px;
+    transition: 0.2s;
+  }
+
+  .modal__li > a:hover {
+    text-shadow: $shadow-blue 0 3.3px;
+    color: $third-color;
+    font-size:15vw;
+  }
+
+  .modal__li > div {
+    font-size: 8vw;
+    color: $third-color;
+  }
+
+}
+

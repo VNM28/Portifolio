@@ -1,0 +1,39 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * MOBILE-LAYOUT..................Layout das seções(header, nav...) para dispositivos mobile.
+ * @include flex..................Mixin localizado em /base/_general.scss.
+ * $variavelCo....................As variáveis para determinar cor estão em _colors.scss.
+ */
+
+
+
+
+body { margin: 0; }
+
+.main_container {
+  height: 100%;
+  width:  100%;
+  @include flex(column,'','');
+  gap: 10px;
+}
+
+.main { order: 3; }
+
+.navigation {
+  position: sticky;
+  top:   0;
+  order: 2;
+  height: max-content;
+}
+
+.aside {
+  width: 100%;
+  color: $fourth-color;
+  height: 80px;
+}
+
+
+

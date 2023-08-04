@@ -13,11 +13,12 @@
 
 
 //BASE 
-  @import "base/general";
-  @import "base/fonts";
   @import "base/colors";
+  @import "base/general";
+  @import "base/breakpoints";
+  @import "base/fonts";
   @import "base/normalize";
-
+ 
 
 
 
@@ -29,21 +30,21 @@
 
 
 //LAYOUT
-  @import "layout/_main/main";
-  @import "layout/_main/main--sobreMin";
-  @import "layout/aside";
-  @import "layout/header";
-  @import "layout/modal";
-  @import "layout/nav";
-  @import "layout/desktop-layout";
-  @import "layout/mobile-layout";
+  @media (width > $l) {
+    @import "layout/l/index-l";
+  }
 
+  @media (width > $m) and (width <= $l) {
+     @import "layout/m/index-m";
+  }
 
-
+  @media (width <= $m) {
+    @import "layout/s/index-s";
+  }
 
 
 //STATE
- // @import "state/layout--animations";
+  //@import "state/layout--animations";
   @import "state/main__component--animations";
 
 

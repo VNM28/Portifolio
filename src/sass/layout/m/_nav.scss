@@ -1,0 +1,43 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * NAV-FOR-DESKTOP.................Media Query com configurações do Nav para desktop.
+ * NAV-FOR-MOBILE..................Media Query com configurações do Nav para dispositivos mobile.
+ * GENERAL-NAV.....................Configurações genéricas do Nav.
+ * @include flex..................Mixin localizado em /base/_general.scss. 
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+
+.navigation { 
+  overflow: hidden;
+  z-index: 2;
+ 
+  &__ul .logo {
+    position: absolute;
+    margin-right: 83vw;
+    height: 10vw ;
+    width:  13vw;
+    margin-top: -2vw;
+  }
+
+  &__ul {
+    padding:  5px 20px 15px;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    @include flex('',right,'');
+    flex-wrap: wrap;
+    background-color: $background-color; 
+  }
+
+  &__ul &__li { display: none; } 
+ 
+}
+
+

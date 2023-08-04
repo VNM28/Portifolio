@@ -1,0 +1,39 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * LAYOUT..................Layout das seções(header, nav...) para desktop.
+ * $variavelCor....................As variáveis para determinar cor estão em _colors.scss.
+ */
+
+ 
+
+/*---------------------------*\
+ #LAYOUT
+\*---------------------------*/
+ 
+@media screen and (min-width: 913px){
+
+  body { margin: 1vw 2vw 0px 2vw; }
+
+  .main_container {
+    height: 100%;
+    width:  100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 5vw calc(97vh - 5vw - 1vw);
+    grid-template-areas:
+            "nav  nav  nav"
+            "main main main";
+  
+  }
+ 
+  .main { grid-area: main; }
+
+  .navigation { grid-area: nav; }
+
+  .aside { grid-area: aside; display: none;}
+
+}
+

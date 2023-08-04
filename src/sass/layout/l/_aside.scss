@@ -1,0 +1,44 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * GENERAL-ASIDE.....................Configurações genéricas do Aside.
+ * @include flex.....................Mixin localizado em /base/_general.scss.
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+
+/*---------------------------*\
+ #GENERAL-ASIDE
+\*---------------------------*/
+
+.aside {
+
+  display: none;
+  
+   &__div--l {
+    margin-top: 10vw;
+    margin-left: 5vw;
+    position: absolute;
+    @include flex(column, '', center);
+    gap: 3vw;
+    border-radius: 10px;
+    background-color: $background-color;
+    width:  max-content;
+    height: max-content;
+  }
+
+  &__button { padding: 0; } /* .aside__button{ e} é uma extensão de button{} em _button_scss */
+  
+  &__a {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+}
+
+ 

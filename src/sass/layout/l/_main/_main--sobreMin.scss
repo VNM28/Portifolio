@@ -1,0 +1,187 @@
+  
+.main {
+
+  &__div--sobreMin {
+    background-color: $background-color;
+    border-radius: 0 0 1vw 1vw;
+    padding-bottom: 5vw;
+    width: 100%;
+    display:  grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.3fr;
+    grid-template-areas: 
+           "nome  img"
+           "texto img";
+
+    height: 46.5vw;
+    flex-wrap: wrap;
+  }
+ 
+  &__component {
+    //border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows:    repeat(10, 10%);
+  }
+
+  &__component--nome {
+    //border: 2px solid red;
+    //margin-bottom: 7vw;
+    margin-left: 20vw;
+    grid-area: nome;
+  
+    & h3 {
+      color: white;
+      grid-area: 1 / 1 / 4 / 11;
+      margin-bottom: 0;
+      font-size: 1.7vw;
+      @include flex ('', '', flex-end); 
+    }
+
+    & h1 {
+      @include flex(column,'', center);
+      line-height: 5vw;
+      font-size:   6vw;
+      grid-area: 4 / 1 / 11 / 11;
+      margin: 0;
+      color: $fourth-color;
+      text-shadow: $shadow-grey 0 0.3vw;
+
+      & span {
+        position: absolute;
+        margin-top:  5vw;
+        margin-left: 13vw;
+        font-size:   8vw;
+        color: $third-color;
+        text-shadow: $shadow-blue 0 0.3vw;
+      }
+
+    }
+
+  }
+
+  &__component--texto {
+    //border: 2px solid red;
+    margin-left: 20vw;
+    grid-area: texto;
+    
+    & h3 {
+      grid-area: 1 / 1 / 2 / 4;
+      font-size: 1.2vw;
+      color: $fourth-color;
+    } 
+
+    & h2 {
+      margin-top: 1.5vw;
+      font-size:  1.9vw;
+      position: absolute;
+      color: $third-color;
+      text-shadow: $shadow-blue 0 0.1vw;
+    }
+
+    & p {
+      grid-area: 3 / 1 / 11 / 11;
+      font-size: 1.1vw;
+      text-align: justify;
+      font-family: 'Calibri';
+      margin: 0;
+      text-indent: 3vw;
+      color: $fourth-color;
+    }
+
+    .main__component--texto--footer {
+      @include flex ('',center,'');
+      grid-area: 9 / 1 / 11 / 11 ;
+      gap: 10px;
+
+      .main__button--cv, .main__button--contato {
+        @include flex ('', center, center);
+        color: $background-color;
+        font-size: 1.6vw;
+        height: 70%;
+        width:  80%;
+        box-shadow:  $shadow-grey 0px 10px;
+        
+        &:hover {
+          box-shadow: $shadow-grey 0px 22px;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__component--img {
+    margin-left: 5vw;
+    margin-right: 15vw;
+    grid-area: img;
+
+    & .main__img--card {
+     grid-area: 1 / 1 / 11 / 11;
+     @include flex ('', center, center);
+      
+      & .main__img--before {
+        width:  26vw;
+        height: 25vw;
+        border: 1px solid $third-color;
+        box-shadow: $third-color 0.5vw 3.5vw;
+        border-radius: 10px;
+      }
+
+       & .main__img--after { 
+         transition: all 0.5s;
+         position: absolute;
+         margin-left: -25vw;
+         z-index: -1;
+         opacity: 0;
+         width:  25vw;
+         height: 25vw;
+       }
+
+      & .blureffect {
+        border-radius: 10px;
+        position: absolute;
+        margin-top: -25vw;
+        width:  25vw;
+        height: 25vw;
+      }
+
+      & p {
+        font-weight: bold;
+        font-family: 'Calibri';
+        margin-left: 2vw; 
+        position: absolute;
+        font-size: 0.8vw;
+        margin-top: 1vw;
+        color: black;
+      }
+
+    }
+
+    & .main__img--setas {
+      grid-area: 10 / 6 / 11 / 7;
+      @include flex ('', center, center);
+
+      & img {
+        width:  5vw;
+        height: 4vw;
+      }
+
+    }
+
+    & .main__img--detail {
+      //border: 2px solid red;
+      grid-area: 2 / 8 / 3 / 11;
+      @include flex ('', center, flex-end);
+
+      & img {
+        width:  6vw;
+        height: 3vw;
+      }
+
+    }
+
+  }
+ 
+}

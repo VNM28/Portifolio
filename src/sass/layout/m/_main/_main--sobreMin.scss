@@ -1,0 +1,183 @@
+  
+.main {
+
+  &__div--sobreMin {
+    display: none;
+    padding: 10px;
+    width: 100%;
+    display:  grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1.3fr;
+    grid-template-areas: 
+           "nome  img"
+           "texto img";
+    flex-wrap: wrap;
+    height: 70vw;
+  }
+ 
+  &__component {
+    //border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows:    repeat(10, 10%);
+  }
+
+  &__component--nome {
+    grid-area: nome;
+  
+    & h3 {
+      color: white;
+      grid-area: 1 / 1 / 4 / 11;
+      margin-bottom: 0;
+      font-size: 2.3vw;
+      @include flex ('', '', flex-end); 
+    }
+
+    & h1 {
+      @include flex(column,'', center);
+      line-height: 5vw;
+      font-size:   9vw;
+      grid-area: 4 / 1 / 11 / 11;
+      margin: 0;
+      color: $fourth-color;
+      text-shadow: $shadow-grey 0 0.3vw;
+
+      & span {
+        position: absolute;
+        margin-top:  7vw;
+        margin-left: 16vw;
+        font-size:   11vw;
+        color: $third-color;
+        text-shadow: $shadow-blue 0 0.3vw;
+      }
+
+    }
+
+  }
+
+  &__component--texto {
+    grid-area: texto;
+    
+    & h3 {
+      //display: none;
+      grid-area: 1 / 1 / 2 / 4;
+      font-size: 2.3vw;
+      color: $fourth-color;
+    } 
+
+    & h2 {
+      //display: none;
+      margin-top: 2.5vw;
+      font-size:  2.9vw;
+      position: absolute;
+      color: $third-color;
+      text-shadow: $shadow-blue 0 0.2vw;
+    }
+
+    & p {
+      //display: none;
+      grid-area: 3 / 1 / 11 / 11;
+      font-size: 2.2vw;
+      text-align: justify;
+      margin: 0;
+      text-indent: 3vw;
+      color: $fourth-color;
+    }
+
+    .main__component--texto--footer {
+      @include flex ('',center,'');
+      grid-area: 9 / 1 / 11 / 11 ;
+      display: none;
+      gap: 10px;
+
+      .main__button--cv, .main__button--contato {
+        @include flex ('', center, center);
+        color: $third-color;
+        font-size: 1.6vw;
+        height: 70%;
+        width:  80%;
+        box-shadow: $shadow-grey 0px 10px;
+        
+        &:hover {
+          box-shadow: $shadow-grey 0px 22px;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__component--img {
+    grid-area: img;
+
+    & .main__img--card {
+      grid-area: 1 / 1 / 11 / 11;
+      @include flex ('', center, center);
+      
+      & .main__img--before {
+        width:  49vw;
+        height: 49vw;
+        border: 0.1vw solid $third-color;
+        box-shadow: $third-color 1vw 6.5vw;
+        border-radius: 10px;
+      }
+
+       & .main__img--after { 
+         transition: all 0.5s;
+         position: absolute;
+         z-index: -1;
+         margin-left: -49vw;
+         opacity: 0;
+         width:  49vw;
+         height: 49vw;
+       }
+
+      & .blureffect { 
+        border-radius: 10px;
+        position: absolute;
+        margin-top: -49vw; 
+        width:  49vw;
+        height: 49vw;
+      }
+
+      & p {
+        font-weight: bold;
+        font-family: 'Calibri'; 
+        position: absolute;
+        font-size: 2vw;
+        margin-top: 1.5vw;
+        margin-left: 4vw;
+        color: black;
+      }
+
+    }
+
+    & .main__img--setas {
+      //border: 2px solid red;
+      grid-area: 11 / 6 / 11 / 7;
+      @include flex ('', center, center);
+
+      & img {
+        display: '';
+        width:  7vw;
+        height: 6vw;
+      }
+
+    }
+
+    & .main__img--detail {
+      //border: 2px solid red;
+      grid-area: 1 / 1 / 3 / 10;
+      @include flex ('', flex-end, center);
+
+      & img {
+        width:  10vw;
+        height: 7vw;
+      }
+
+    }
+
+  }
+ 
+}

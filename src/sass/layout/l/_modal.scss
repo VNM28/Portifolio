@@ -1,0 +1,24 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * MODAL-FOR-IPADIMINI...............Media Query com configurações do Nav para IPadMini.
+ * MODAL-FOR-IPADAIR.................Media Query com configurações do Nav para IPadAir.
+ * MODAL-FOR-SURFACEPRO7.............Media Query com configurações do Nav para SurFacePRO7.
+ * MODAL-FOR-GALAXYFOLD..............Media Query com configurações do Nav para GalaxyFold.
+ * GENERAL-MODAL.....................Configurações genéricas do Nav.
+ * @include flex.....................Mixin localizado em /base/_general.scss.
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+
+.modal__content { display: none; }
+
+
+
+
+

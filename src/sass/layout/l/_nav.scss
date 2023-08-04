@@ -1,0 +1,106 @@
+
+/**
+ * TABLE CONTENTS
+ *
+ * SETTINGS
+ * GENERAL-NAV.....................Configurações genéricas do Nav.
+ * @include flex..................Mixin localizado em /base/_general.scss. 
+ * $variavelCor......................As variáveis para determinar cor estão em _colors.scss.
+ * */
+
+
+
+
+/*---------------------------*\
+ #GENERAL-NAV
+\*---------------------------*/
+
+.navigation { 
+  //overflow: hidden;
+  background-color: $background-color;
+  //position: sticky;
+  top: 0;
+  z-index: 2;
+  border-radius: 1vw 1vw 0 0;
+  //border: 2px solid red;;
+
+
+  & .TopDetail {
+    display: none;
+    margin-top: -1vw;
+    width: 21.4vw;
+    height: 6.3vw;
+    margin-left: 75vw;
+    position: absolute;
+  }
+
+  &__ul {
+    //border: 2px solid red;
+    margin:  0;
+    padding: 0 ;
+    border-radius: 30px;
+    list-style: none;
+    height: 100%;
+    @include flex(row, center,'');
+    background-color: $background-color; 
+  }
+
+  &__ul .logo {
+    position: absolute;
+    margin-right: 80vw;
+    height: 5vw ;
+    width: 7vw;
+    //border: 2px solid red;
+  }
+  
+  &__ul h6 {
+    font-size: 1.3vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    //border: 2px solid red;
+    @include flex (column, flex-end, center);
+  }
+
+  &__ul &__button { display: none; }
+
+  &__title { display: none; }
+
+  &__li {
+    margin-left: 2vw;
+    //border: 2px solid red;
+    @include flex(column, center, center); 
+  }
+  
+  &__li &__div {
+     font-size: 1.3vw;
+     color: $third-color;
+   }
+
+  &__li &__a {
+    color: $fourth-color;
+    width: max-content;
+    font-size:  1.8vw;
+    text-decoration: none; 
+    text-shadow: $shadow-grey 0 0.1vw;
+    letter-spacing: 0.2vw;
+    transition: 0.2s;  
+  }
+
+  &__li  &__a:hover {
+     color: $third-color;
+     font-size: 2.0vw;
+     text-shadow: $shadow-blue 0 0.2vw;
+    
+  }
+
+  &__title {
+    position: absolute;
+    color: $fourth-color;
+    left: 10px;
+    font-size: 35px;
+    text-shadow: $shadow-grey 0 3.3px;
+  }
+ 
+}
+
+

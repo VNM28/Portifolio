@@ -26,8 +26,8 @@ button {
   transition-duration: 0.5s;
 
   & img {
-    width:  max(35px, 4vw);
-    height: max(25px, 3vw);
+    width:  max(35px, 3.5vw);
+    height: max(25px, 2.5vw);
   }
 
   @media (min-width: 913px){

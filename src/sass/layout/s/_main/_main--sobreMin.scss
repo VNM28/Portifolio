@@ -1,0 +1,172 @@
+  
+.main {
+
+  &__div--sobreMin { 
+    padding: 10px;
+    width: auto;
+    @include flex(column, '', '');
+    height: max-content;
+  }
+ 
+  &__component {
+    padding: 15vw 0 15vw 0;
+   }
+
+  &__component--nome {
+    @include flex (column, '', '');
+    grid-area: nome;
+  
+    & h3 {
+      color: white;
+      margin-bottom: 2vw;
+      font-size: 4.7vw;
+      @include flex ('', '', flex-end); 
+    }
+
+    & h1 {
+      @include flex(column,'', '');
+      line-height: 5vw;
+      font-size:   18vw;
+      grid-area: 4 / 1 / 11 / 11;
+      margin: 0;
+      color: $fourth-color;
+      text-shadow: $shadow-grey 0 0.3vw;
+
+      & span {
+        position: absolute;
+        margin-top:  13vw;
+        margin-left: 10vw;
+        font-size:   20vw;
+        color: $third-color;
+        text-shadow: $shadow-blue 0 0.3vw;
+      }
+
+    }
+
+  }
+
+  &__component--texto {
+    @include flex (column, '',  '');
+    grid-area: texto;
+    
+    & h3 {
+      grid-area: 1 / 1 / 2 / 4;
+      font-size: 4vw;
+      //margin-left: -65vw;
+      color: $fourth-color;
+    } 
+
+    & h2 {
+      margin: 0;
+      font-size:  6.7vw;
+      position: '';
+      color: $third-color;
+      text-shadow: $shadow-blue 0 0.2vw;
+    }
+
+    & p {
+      grid-area: 3 / 1 / 11 / 11;
+      font-size: 3.9vw;
+      text-align: justify;
+      margin: 0;
+      text-indent: 3vw;
+      color: $fourth-color;
+    }
+
+    .main__component--texto--footer {
+      @include flex ('',center,'');
+      grid-area: 9 / 1 / 11 / 11 ;
+      gap: 10px;
+      margin-top: 10vw;
+     
+
+      .main__button--cv, .main__button--contato {
+        @include flex ('', center, center);
+        color: $third-color;
+        font-size: 5vw;
+        height: 13vw;
+        width:  45vw;
+        box-shadow: $shadow-grey 0px 10px;
+        
+        &:hover {
+          box-shadow: $shadow-grey 0px 22px;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__component--img {
+    padding: 0;
+    grid-area: img;
+
+    & .main__img--card { 
+     @include flex ('', center, center);
+      
+      & .main__img--before {
+        width:  85vw;
+        height: 85vw;
+        border: 1px solid $third-color;
+        box-shadow: $third-color 2.5vw 10.5vw;
+        border-radius: 10px;
+      }
+
+       & .main__img--after { 
+         transition: all 0.5s;
+         position: absolute;
+         margin-left: -85vw;
+         z-index: -1;
+         opacity: 0;
+         width:  85vw;
+         height: 85vw;
+       }
+
+      & .blureffect { 
+        border-radius: 10px;
+        margin-top: -85vw;
+        position: absolute; 
+        width:  85vw;
+        height: 85vw;
+      }
+
+      & p {
+        font-weight: bold;
+        font-family: 'Calibri';
+        position: absolute;
+        font-size: 2.8vw;
+        margin-left: 10vw;
+        margin-top: 3vw;
+        color: black;
+      }
+
+    }
+
+    & .main__img--setas {
+      margin-top: 15vw;
+      @include flex (column, center, center);
+
+      & img {
+        width:  17vw;
+        height: 14vw;
+      }
+
+    }
+
+    & .main__img--detail {  
+     margin-bottom: -3vw;
+      @include flex ('', flex-end, '');
+
+      & img {
+        margin-right:  5vw;
+        margin-bottom: 2vw;
+        width:  18vw;
+        height: 10vw;
+      }
+
+    }
+
+  }
+ 
+}

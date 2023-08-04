@@ -1,4 +1,4 @@
-.main__component--img div:nth-child(2) img {
+.main__component--img .main__img--setas img {
    animation: bouncing 2s linear infinite both;
 }
 
@@ -16,32 +16,32 @@
   }
 }
 
-.main__component--img div:nth-child(1) div{
+.main__component--img .main__img--card div{
     
-   & img:nth-child(1) {
+   & .main__img--before {
      transition-duration: 0.8s;
    }
 
-   &:hover img:nth-child(1) {
+   &:hover .main__img--before {
      transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
      box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
    }
 
-   & img:nth-child(2) {
+   & .main__img--after {
      transition-duration: 0.8s;
    }
 
-   &:hover img:nth-child(2) {
+   &:hover .main__img--after {
      opacity: 1;
      z-index: 1;
      transform: translate3d(0%, -30%, 100px);
    }
    
-   & div {
+   & .blureffect {
      transition-duration: 0.8s;
    }
    
-   &:hover div {
+   &:hover .blureffect {
      transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
      backdrop-filter: blur(5px);
      background-image:"";
